@@ -1,0 +1,43 @@
+/* RESET - Fixes bullets & blue links bug */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Georgia, serif; background: #FFC017; color: #000; }
+
+/* NAVBAR - Flexbox */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 60px; background: #FFC017; border-bottom: 1px solid #000;
+}
+.logo { font-size: 32px; font-weight: 900; letter-spacing: -1px; }
+.nav-links {
+    display: flex; list-style: none; align-items: center; gap: 25px;
+}
+.nav-links a { text-decoration: none; color: #000; font-family: Arial, sans-serif; font-size: 14px; }
+.btn-black { background: #000; color: #fff !important; padding: 10px 20px; border-radius: 30px; }
+
+/* HERO - Flexbox */
+.hero {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 60px; min-height: 500px; background: #FFC017; border-bottom: 1px solid #000;
+}
+.hero-left { flex: 1; max-width: 600px; }
+.hero-left h1 { font-size: 100px; line-height: 95px; font-weight: 900; letter-spacing: -4px; margin-bottom: 30px; }
+.hero-left p { font-size: 22px; margin-bottom: 40px; font-family: Arial, sans-serif; max-width: 400px; line-height: 28px; }
+.btn-hero { background: #000; color: #fff; text-decoration: none; padding: 12px 35px; border-radius: 30px; font-family: Arial, sans-serif; font-size: 18px; display: inline-block; }
+.hero-right { flex: 1; display: flex; justify-content: flex-end; }
+.flower-art { width: 100%; max-width: 500px; }
+
+/* FOOTER */
+footer { background: #fff; padding: 25px 60px; text-align: center; border-top: 1px solid #000; }
+footer p { font-family: Arial, sans-serif; font-size: 14px; }
+
+/* RESPONSIVE - Mobile + Desktop */
+@media (max-width: 900px) {
+    .navbar { padding: 20px; }
+    .nav-links li:not(:last-child) { display: none; }
+    .hero { flex-direction: column; padding: 40px 20px; align-items: flex-start; }
+    .hero-left h1 { font-size: 70px; line-height: 70px; }
+    .hero-right { display: none; }
+}
+@media (max-width: 480px) {
+    .hero-left h1 { font-size: 55px; line-height: 55px; }
+}
